@@ -1,7 +1,3 @@
-<script>
-    console.log("Your mother!")
-</script>
-
 <!--The following comments are meant to be my psuedocode,
 followed by my actual JS code for the console -->
 
@@ -13,53 +9,25 @@ Define string values so Scissors beats Paper, Paper beats Rock, and Rock beats s
 Compare computer to user guess
 Implement comparator to define winner
 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <script src="RPS_New.js" defer></script>
 
-<!--
-let humanScore = 0
-let compScore = 0
-
-while (humanScore !=5 && compScore !=5){
-
-function returnScore() {
-console.log("Your score is currently " + humanScore + " while the comptuer's is " + compScore);
-}
-returnScore()
-
-let shoot = ["Rock", "Paper", "Scissors"];
-let compguess = shoot[Math.floor(Math.random() * 3)];
-let userguess = prompt('Pick "Rock", "Paper", or "Scissors"')
-console.log('You picked '+ userguess + ' the computer chose ' + compguess); 
-let user = userguess?.charAt(0).toUpperCase() + userguess?.slice(1);
-
-if (userguess === null) {
-console.log("Game ended!")
-break;
-}
-
-function rps() {
-    let a = 'You won, baby!';
-    let b = 'The computer has bested you.';
-    let c = "Please actually type in Rock, Paper, or Scissors, thanks broski."
-    let d = 'Draw!'
-
-    if (user === 'Rock' && compguess === 'Scissors' || user === 'Paper' && compguess === 'Rock' || user === 'Scissors' && compguess === 'Paper')
-    return a + " Your score is " + ++humanScore ;
-
-    else if (user !== 'Rock' && user !== 'Paper' && user !== 'Scissors')
-    return c;
-
-    else if (user == compguess)
-    return d;
-
-    else return b + " The compturer's score is " + ++compScore;
-}
-   console.log(rps())
-
-
-if (humanScore === 5)
-console.log("You're the winner!");
-
-else if (compScore === 5)
-console.log("Bummer, dawg");
-}
-    -->
+    <body>
+        <button id = "start">Start</button>
+        <div>
+            <button onclick="playRound('Rock')">Rock</button>
+            <button onclick="playRound('Paper')">Paper</button>
+            <button onclick="playRound('Scissors')">Scissors</button>
+        </div> 
+        <button onclick="playRound('End')">End</button>
+        
+        <div id="results"></div>
+        <div id="Player"></div>
+        <div id="Computer"></div>
+        <div id="Winner"></div>
+    </body>
+    </head>
+</html>
